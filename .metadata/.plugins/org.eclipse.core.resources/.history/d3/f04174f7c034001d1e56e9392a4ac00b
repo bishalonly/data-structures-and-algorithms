@@ -1,0 +1,57 @@
+package tree;
+
+import java.util.Arrays;
+
+public class BinaryTreeArray {
+	int[] arr;
+	private int lastIndex;
+	
+	public BinaryTreeArray(int size) {
+		arr = new int[size+1];
+		lastIndex = 0;
+	}
+	
+	public boolean isFull() {
+		return (lastIndex == arr.length - 1);
+	}
+
+	public static void main(String[] args) {
+		BinaryTreeArray bta = new BinaryTreeArray(5);
+		bta.insert(1);
+		bta.insert(2);
+		bta.insert(3);
+		bta.insert(4);
+		bta.insert(5);
+		bta.insert(6);
+		bta.print();
+		bta.preOder();
+	}
+	
+	public void preOder() {
+		int index = 1;
+		
+		while(index <= arr.length) {
+			System.out.println(arr[index] + " ");
+			index *= 2 ; 
+		}
+		index = 3;
+		while(index <= arr.length) {
+			System.out.println(arr[index] + " ");
+			index = index * 2 + 1;
+		}
+		
+	}
+	
+	public void insert(int data) {
+		if(!isFull()) {
+			arr[++lastIndex] = data;
+		} else {
+			System.out.println("can't add " + data + " as binary tree is full.");
+		}
+	}
+	
+	public void print() {
+		System.out.println(Arrays.toString(arr));
+	}
+
+}

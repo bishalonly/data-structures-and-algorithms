@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;stack&apos; in &apos;stack.Stack.main(...)&apos; to &apos;stack1&apos;&#x0D;&#x0A;- Original project: &apos;DSA&apos;&#x0D;&#x0A;- Original element: &apos;stack.Stack.main(String[]).stack&apos;&#x0D;&#x0A;- Renamed element: &apos;stack&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;stack&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;stack{Stack.java[Stack~main~\[QString;@stack!288!313!294!298!QStack;!0!false" name="stack1" references="true" stamp="1662097011825" version="1.0"/>
+</session>

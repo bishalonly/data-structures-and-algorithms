@@ -1,0 +1,47 @@
+package tree;
+
+import java.util.ArrayList;
+
+public class Tree {
+
+	public static void main(String[] args) {
+		TreeNode drinks = new TreeNode("drinks");
+		TreeNode hot = new TreeNode("hot");
+		TreeNode cold = new TreeNode("cold");
+		TreeNode tea = new TreeNode("tea");
+		TreeNode coffee = new TreeNode("coffee");
+		TreeNode beer = new TreeNode("beer");
+		TreeNode wine = new TreeNode("wine");
+		drinks.addChild(hot);
+		drinks.addChild(cold);
+		hot.addChild(tea);
+		hot.addChild(coffee);
+		cold.addChild(wine);
+		cold.addChild(beer);
+		System.out.println(drinks.print(0));
+	}
+
+}
+
+class TreeNode {
+	public String data;
+	public ArrayList<TreeNode> children;
+	
+	public TreeNode(String data) {
+		this.data = data;
+		this.children = new ArrayList<>();
+	}
+	
+	public void addChild(TreeNode node) {
+		this.children.add(node);
+	}
+	
+	public String print(int level) {
+		String ans;
+		ans = "    ".repeat(0)+data+"\n";
+		for(TreeNode n : this.children) {
+			ans += n.print(level+1);
+		}
+		return ans;
+	}
+}
